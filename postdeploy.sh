@@ -32,7 +32,7 @@ git clone https://github.com/Thiennam209/dt-denso
 MachineId=$(az dt model create -n $adtname --models ./dt-denso/models/machine.json --query [].id -o tsv)
 
 # echo 'instantiate ADT Instances'
-for i in {1..10}
+for i in {1..100}
 do
     echo "Create machine Machine$i"
     az dt twin create -n $adtname --dtmi $MachineId --twin-id "Machine$i"
