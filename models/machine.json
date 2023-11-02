@@ -1,0 +1,383 @@
+{
+  "@id": "dtmi:digitaltwins:Basic:machine;1",
+  "@type": "Interface",
+  "@context": ["dtmi:dtdl:context;2"],
+  "displayName": "Wind machine -v1",
+  "description": "Wind machine data",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "MachineId",
+      "displayName": "MachineId",
+      "description": "The unique id of the machine",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "Alert",
+      "displayName": "Alert",
+      "description": "whether or not this machine needs maintenance",
+      "writable": true,
+      "schema": "boolean"
+    },
+    {
+      "@type": "Property",
+      "name": "Time",
+      "displayName": "Time",
+      "description": "The Time interval of this data",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "Part",
+      "displayName": "Part",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "Station",
+      "displayName": "Station",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "Serial",
+      "displayName": "Serial",
+      "writable": true,
+      "schema": "integer"
+    },
+    {
+      "@type": "Property",
+      "name": "AdjJudge",
+      "displayName": "AdjJudge",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "Pressure",
+      "displayName": "Pressure",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "IP1",
+      "displayName": "IP1",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "IP2",
+      "displayName": "IP2",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "AdjRetry",
+      "displayName": "AdjRetry",
+      "writable": true,
+      "schema": "integer"
+    },
+    {
+      "@type": "Property",
+      "name": "CrimpJudge",
+      "displayName": "CrimpJudge",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "PerformJudge",
+      "displayName": "PerformJudge",
+      "writable": true,
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "I1",
+      "displayName": "I1",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I2",
+      "displayName": "I2",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I3",
+      "displayName": "I3",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I4",
+      "displayName": "I4",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I5",
+      "displayName": "I5",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I6",
+      "displayName": "I6",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I7",
+      "displayName": "I7",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I8",
+      "displayName": "I8",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I9",
+      "displayName": "I9",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I10",
+      "displayName": "I10",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I11",
+      "displayName": "I11",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I12",
+      "displayName": "I12",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I13",
+      "displayName": "I13",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I14",
+      "displayName": "I14",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I15",
+      "displayName": "I15",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I1I15",
+      "displayName": "I1I15",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I2I14",
+      "displayName": "I2I14",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I3I13",
+      "displayName": "I3I13",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I4I12",
+      "displayName": "I4I12",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I5I11",
+      "displayName": "I5I11",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I6I10",
+      "displayName": "I6I10",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "I7I9",
+      "displayName": "I7I9",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "Stick1",
+      "displayName": "Stick1",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "Stick3",
+      "displayName": "Stick3",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "Stick4",
+      "displayName": "Stick4",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "Flow",
+      "displayName": "Flow",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "PerformRetry",
+      "displayName": "PerformRetry",
+      "writable": true,
+      "schema": "integer"
+    },
+    {
+      "@type": "Property",
+      "name": "Resp1_T1",
+      "displayName": "Resp1_T1",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "Resp1_T2",
+      "displayName": "Resp1_T2",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "Resp1_P5",
+      "displayName": "Resp1_P5",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "Resp1_P6",
+      "displayName": "Resp1_P6",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "Resp2_T1",
+      "displayName": "Resp2_T1",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "Resp2_T2",
+      "displayName": "Resp2_T2",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "Resp2_P5",
+      "displayName": "Resp2_P5",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "Resp2_P6",
+      "displayName": "Resp2_P6",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "Resp3_T1",
+      "displayName": "Resp3_T1",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "Resp3_T2",
+      "displayName": "Resp3_T2",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "Resp3_P5",
+      "displayName": "Resp3_P5",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "Resp3_P6",
+      "displayName": "Resp3_P6",
+      "writable": true,
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "RespRetry",
+      "displayName": "RespRetry",
+      "writable": true,
+      "schema": "integer"
+    }
+  ]
+}

@@ -15,15 +15,60 @@ namespace SignalRFunctions
 {
     public static class SignalRFunctions
     {
-        public static string turbineId;
-        public static string timeInterval;
-        public static string description;
-        public static int code;
-        public static double windSpeed;
-        public static double temperature;
-        public static double rotorRPM;
-        public static double power = 0.0D;
+        public static string MachineId;
+        public static string Time;
+        public static int Part;
+        public static string Station;
+        public static int Serial;
+        public static string AdjJudge;
+        public static double Pressure;
+        public static double IP1;
+        public static double IP2;
+        public static int AdjRetry;
+        public static string CrimpJudge;
+        public static string PerformJudge;
+        public static double I1;
+        public static double I2;
+        public static double I3;
+        public static double I4;
+        public static double I5;
+        public static double I6;
+        public static double I7;
+        public static double I8;
+        public static double I9;
+        public static double I10;
+        public static double I11;
+        public static double I12;
+        public static double I13;
+        public static double I14;
+        public static double I15;
+        public static double I1I15;
+        public static double I2I14;
+        public static double I3I13;
+        public static double I4I12;
+        public static double I5I11;
+        public static double I6I10;
+        public static double I7I9;
+        public static double Stick1;
+        public static double Stick3;
+        public static double Stick4;
+        public static double Flow;
+        public static int PerformRetry;
+        public static double Resp1_T1;
+        public static double Resp1_T2;
+        public static double Resp1_P5;
+        public static double Resp1_P6;
+        public static double Resp2_T1;
+        public static double Resp2_T2;
+        public static double Resp2_P5;
+        public static double Resp2_P6;
+        public static double Resp3_T1;
+        public static double Resp3_T2;
+        public static double Resp3_P5;
+        public static double Resp3_P6;
+        public static int RespRetry;
         public static bool alert;
+
 
         [FunctionName("negotiate")]
         public static SignalRConnectionInfo GetSignalRInfo(
@@ -61,13 +106,13 @@ namespace SignalRFunctions
             {
                 try
                 {
-                    turbineId = eventGridEvent.Subject;
-                    
+                    MachineId = eventGridEvent.Subject;
+
                     var data = eventGridData.SelectToken("data");
                     var patch = data.SelectToken("patch");
-                    foreach(JToken token in patch)
+                    foreach (JToken token in patch)
                     {
-                        if(token["path"].ToString() == "/Alert")
+                        if (token["path"].ToString() == "/Alert")
                         {
                             alert = token["value"].ToObject<bool>();
                         }
@@ -76,7 +121,7 @@ namespace SignalRFunctions
                     log.LogInformation($"setting alert to: {alert}");
                     var property = new Dictionary<object, object>
                     {
-                        {"TurbineID", turbineId },
+                        {"MachineId", MachineId },
                         {"Alert", alert }
                     };
                     return signalRMessages.AddAsync(
