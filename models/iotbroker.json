@@ -1,0 +1,19 @@
+{
+  "@id": "dtmi:example:IoTBrokerHub;1",
+  "@type": "Interface",
+  "displayName": "IoT Broker - Hub",
+  "@context": "dtmi:dtdl:context;2",
+  "contents": [
+    {
+        "@type": "Property",
+        "name": "Date",
+        "schema": "integer"
+      },
+    {
+      "@type": "Relationship",
+      "name": "contains",
+      "displayName": "contains",
+      "target": "dtmi:example:ManufacturingArea;1"
+    }
+  ]
+}

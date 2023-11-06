@@ -38,15 +38,15 @@ namespace My.Function
                 log.LogInformation($"ADT service client connection created.");
                 if (eventGridEvent.Data.ToString().Contains("Alert"))
                 {
-                    JObject alertMessage = (JObject)JsonConvert.DeserializeObject(eventGridEvent.Data.ToString());
-                    string deviceId = (string)alertMessage["systemProperties"]["iothub-connection-device-id"];
-                    var ID = alertMessage["body"]["MachineId"];
-                    var alert = alertMessage["body"]["Alert"];
+                    JObject AlertMessage = (JObject)JsonConvert.DeserializeObject(eventGridEvent.Data.ToString());
+                    string deviceId = (string)AlertMessage["systemProperties"]["iothub-connection-device-id"];
+                    var ID = AlertMessage["body"]["MachineId"];
+                    var Alert = AlertMessage["body"]["Alert"];
                     log.LogInformation($"Device:{deviceId} Device Id is:{ID}");
-                    log.LogInformation($"Device:{deviceId} Alert Status is:{alert}");
+                    log.LogInformation($"Device:{deviceId} Alert Status is:{Alert}");
 
                     var updateProperty = new JsonPatchDocument();
-                    updateProperty.AppendReplace("/Alert", alert.Value<bool>());
+                    updateProperty.AppendReplace("/Alert", Alert.Value<bool>());
                     updateProperty.AppendReplace("/MachineId", ID.Value<string>());
                     log.LogInformation(updateProperty.ToString());
                     try
@@ -71,7 +71,6 @@ namespace My.Function
                     var AdjJudge = deviceMessage["body"]["AdjJudge"];
                     var Pressure = deviceMessage["body"]["Pressure"];
                     var IP1 = deviceMessage["body"]["IP1"];
-                    var IP2 = deviceMessage["body"]["IP2"];
                     var AdjRetry = deviceMessage["body"]["AdjRetry"];
                     var CrimpJudge = deviceMessage["body"]["CrimpJudge"];
                     var PerformJudge = deviceMessage["body"]["PerformJudge"];
@@ -80,12 +79,7 @@ namespace My.Function
                     var I3 = deviceMessage["body"]["I3"];
                     var I4 = deviceMessage["body"]["I4"];
                     var I5 = deviceMessage["body"]["I5"];
-                    var I6 = deviceMessage["body"]["I6"];
-                    var I7 = deviceMessage["body"]["I7"];
-                    var I8 = deviceMessage["body"]["I8"];
-                    var I9 = deviceMessage["body"]["I9"];
                     var I10 = deviceMessage["body"]["I10"];
-                    var I11 = deviceMessage["body"]["I11"];
                     var I12 = deviceMessage["body"]["I12"];
                     var I13 = deviceMessage["body"]["I13"];
                     var I14 = deviceMessage["body"]["I14"];
@@ -94,9 +88,6 @@ namespace My.Function
                     var I2I14 = deviceMessage["body"]["I2I14"];
                     var I3I13 = deviceMessage["body"]["I3I13"];
                     var I4I12 = deviceMessage["body"]["I4I12"];
-                    var I5I11 = deviceMessage["body"]["I5I11"];
-                    var I6I10 = deviceMessage["body"]["I6I10"];
-                    var I7I9 = deviceMessage["body"]["I7I9"];
                     var Stick1 = deviceMessage["body"]["Stick1"];
                     var Stick3 = deviceMessage["body"]["Stick3"];
                     var Stick4 = deviceMessage["body"]["Stick4"];
@@ -110,11 +101,7 @@ namespace My.Function
                     var Resp2_T2 = deviceMessage["body"]["Resp2_T2"];
                     var Resp2_P5 = deviceMessage["body"]["Resp2_P5"];
                     var Resp2_P6 = deviceMessage["body"]["Resp2_P6"];
-                    var Resp3_T1 = deviceMessage["body"]["Resp3_T1"];
-                    var Resp3_T2 = deviceMessage["body"]["Resp3_T2"];
-                    var Resp3_P5 = deviceMessage["body"]["Resp3_P5"];
-                    var Resp3_P6 = deviceMessage["body"]["Resp3_P6"];
-                    var RespRetry = deviceMessage["body"]["RespRetry"];
+                    var Alert = deviceMessage["body"]["Alert"];
 
 
                     var updateProperty = new JsonPatchDocument();
@@ -130,7 +117,6 @@ namespace My.Function
                         ["AdjJudge"] = AdjJudge,
                         ["Pressure"] = Pressure,
                         ["IP1"] = IP1,
-                        ["IP2"] = IP2,
                         ["AdjRetry"] = AdjRetry,
                         ["CrimpJudge"] = CrimpJudge,
                         ["PerformJudge"] = PerformJudge,
@@ -139,12 +125,7 @@ namespace My.Function
                         ["I3"] = I3,
                         ["I4"] = I4,
                         ["I5"] = I5,
-                        ["I6"] = I6,
-                        ["I7"] = I7,
-                        ["I8"] = I8,
-                        ["I9"] = I9,
                         ["I10"] = I10,
-                        ["I11"] = I11,
                         ["I12"] = I12,
                         ["I13"] = I13,
                         ["I14"] = I14,
@@ -153,9 +134,6 @@ namespace My.Function
                         ["I2I14"] = I2I14,
                         ["I3I13"] = I3I13,
                         ["I4I12"] = I4I12,
-                        ["I5I11"] = I5I11,
-                        ["I6I10"] = I6I10,
-                        ["I7I9"] = I7I9,
                         ["Stick1"] = Stick1,
                         ["Stick3"] = Stick3,
                         ["Stick4"] = Stick4,
@@ -169,18 +147,53 @@ namespace My.Function
                         ["Resp2_T2"] = Resp2_T2,
                         ["Resp2_P5"] = Resp2_P5,
                         ["Resp2_P6"] = Resp2_P6,
-                        ["Resp3_T1"] = Resp3_T1,
-                        ["Resp3_T2"] = Resp3_T2,
-                        ["Resp3_P5"] = Resp3_P5,
-                        ["Resp3_P6"] = Resp3_P6,
-                        ["RespRetry"] = RespRetry,
+                        ["Alert"] = Alert,
                     };
-                    updateProperty.AppendAdd("/MachineId", ID.Value<string>());
+
+                    updateProperty.AppendReplace("/MachineId", ID.Value<string>());
+                    updateProperty.AppendReplace("/Time", Time.Value<string>());
+                    updateProperty.AppendReplace("/Part", Part.Value<int>());
+                    updateProperty.AppendReplace("/Station", Station.Value<string>());
+                    updateProperty.AppendReplace("/Serial", Serial.Value<int>());
+                    updateProperty.AppendReplace("/AdjJudge", AdjJudge.Value<string>());
+                    updateProperty.AppendReplace("/Pressure", Pressure.Value<double>());
+                    updateProperty.AppendReplace("/IP1", IP1.Value<double>());
+                    updateProperty.AppendReplace("/AdjRetry", AdjRetry.Value<int>());
+                    updateProperty.AppendReplace("/CrimpJudge", CrimpJudge.Value<string>());
+                    updateProperty.AppendReplace("/PerformJudge", PerformJudge.Value<string>());
+                    updateProperty.AppendReplace("/I1", I1.Value<double>());
+                    updateProperty.AppendReplace("/I2", I2.Value<double>());
+                    updateProperty.AppendReplace("/I3", I3.Value<double>());
+                    updateProperty.AppendReplace("/I4", I4.Value<double>());
+                    updateProperty.AppendReplace("/I5", I5.Value<double>());
+                    updateProperty.AppendReplace("/I10", I10.Value<double>());
+                    updateProperty.AppendReplace("/I12", I12.Value<double>());
+                    updateProperty.AppendReplace("/I13", I13.Value<double>());
+                    updateProperty.AppendReplace("/I14", I14.Value<double>());
+                    updateProperty.AppendReplace("/I15", I15.Value<double>());
+                    updateProperty.AppendReplace("/I1I15", I1I15.Value<double>());
+                    updateProperty.AppendReplace("/I2I14", I2I14.Value<double>());
+                    updateProperty.AppendReplace("/I3I13", I3I13.Value<double>());
+                    updateProperty.AppendReplace("/I4I12", I4I12.Value<double>());
+                    updateProperty.AppendReplace("/Stick1", Stick1.Value<double>());
+                    updateProperty.AppendReplace("/Stick3", Stick3.Value<double>());
+                    updateProperty.AppendReplace("/Stick4", Stick4.Value<double>());
+                    updateProperty.AppendReplace("/Flow", Flow.Value<double>());
+                    updateProperty.AppendReplace("/PerformRetry", PerformRetry.Value<int>());
+                    updateProperty.AppendReplace("/Resp1_T1", Resp1_T1.Value<double>());
+                    updateProperty.AppendReplace("/Resp1_T2", Resp1_T2.Value<double>());
+                    updateProperty.AppendReplace("/Resp1_P5", Resp1_P5.Value<double>());
+                    updateProperty.AppendReplace("/Resp1_P6", Resp1_P6.Value<double>());
+                    updateProperty.AppendReplace("/Resp2_T1", Resp2_T1.Value<double>());
+                    updateProperty.AppendReplace("/Resp2_T2", Resp2_T2.Value<double>());
+                    updateProperty.AppendReplace("/Resp2_P5", Resp2_P5.Value<double>());
+                    updateProperty.AppendReplace("/Resp2_P6", Resp2_P6.Value<double>());
+                    updateProperty.AppendReplace("/Alert", Alert.Value<bool>());
 
                     log.LogInformation(updateProperty.ToString());
                     try
                     {
-                        await client.PublishTelemetryAsync(deviceId, Guid.NewGuid().ToString(), JsonConvert.SerializeObject(machineTelemetry));
+                        await client.UpdateDigitalTwinAsync(deviceId, updateProperty);
                     }
                     catch (Exception e)
                     {

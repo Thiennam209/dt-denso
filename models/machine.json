@@ -2,8 +2,8 @@
   "@id": "dtmi:digitaltwins:Basic:machine;1",
   "@type": "Interface",
   "@context": ["dtmi:dtdl:context;2"],
-  "displayName": "Wind machine -v1",
-  "description": "Wind machine data",
+  "displayName": "Denso machine -v1",
+  "description": "Denso machine data",
   "contents": [
     {
       "@type": "Property",
@@ -73,13 +73,6 @@
     },
     {
       "@type": "Property",
-      "name": "IP2",
-      "displayName": "IP2",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
       "name": "AdjRetry",
       "displayName": "AdjRetry",
       "writable": true,
@@ -131,34 +124,6 @@
       "@type": "Property",
       "name": "I5",
       "displayName": "I5",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "I6",
-      "displayName": "I6",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "I7",
-      "displayName": "I7",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "I8",
-      "displayName": "I8",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "I9",
-      "displayName": "I9",
       "writable": true,
       "schema": "double"
     },
@@ -229,27 +194,6 @@
       "@type": "Property",
       "name": "I4I12",
       "displayName": "I4I12",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "I5I11",
-      "displayName": "I5I11",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "I6I10",
-      "displayName": "I6I10",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "I7I9",
-      "displayName": "I7I9",
       "writable": true,
       "schema": "double"
     },
@@ -343,41 +287,6 @@
       "displayName": "Resp2_P6",
       "writable": true,
       "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "Resp3_T1",
-      "displayName": "Resp3_T1",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "Resp3_T2",
-      "displayName": "Resp3_T2",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "Resp3_P5",
-      "displayName": "Resp3_P5",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "Resp3_P6",
-      "displayName": "Resp3_P6",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "RespRetry",
-      "displayName": "RespRetry",
-      "writable": true,
-      "schema": "integer"
     }
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "@id": "dtmi:example:ManufacturingArea;1",
+  "@type": "Interface",
+  "displayName": "Manufacturing Area",
+  "@context": "dtmi:dtdl:context;2",
+  "contents": [
+    {
+        "@type": "Property",
+        "name": "Date",
+        "schema": "integer"
+      },
+    {
+      "@type": "Relationship",
+      "name": "contains",
+      "displayName": "contains",
+      "target": "dtmi:example:LineGroup;1"
+    }
+  ]
+}
