@@ -23,7 +23,6 @@ namespace SignalRFunctions
         public static string AdjJudge;
         public static double Pressure;
         public static double IP1;
-        public static int AdjRetry;
         public static string CrimpJudge;
         public static string PerformJudge;
         public static double I1;
@@ -31,11 +30,6 @@ namespace SignalRFunctions
         public static double I3;
         public static double I4;
         public static double I5;
-        public static double I10;
-        public static double I12;
-        public static double I13;
-        public static double I14;
-        public static double I15;
         public static double I1I15;
         public static double I2I14;
         public static double I3I13;
@@ -44,7 +38,6 @@ namespace SignalRFunctions
         public static double Stick3;
         public static double Stick4;
         public static double Flow;
-        public static int PerformRetry;
         public static double Resp1_T1;
         public static double Resp1_T2;
         public static double Resp1_P5;
@@ -110,7 +103,6 @@ namespace SignalRFunctions
                             AdjJudge = token["value"].ToObject<string>();
                             Pressure = token["value"].ToObject<double>();
                             IP1 = token["value"].ToObject<double>();
-                            AdjRetry = token["value"].ToObject<int>();
                             CrimpJudge = token["value"].ToObject<string>();
                             PerformJudge = token["value"].ToObject<string>();
                             I1 = token["value"].ToObject<double>();
@@ -118,11 +110,6 @@ namespace SignalRFunctions
                             I3 = token["value"].ToObject<double>();
                             I4 = token["value"].ToObject<double>();
                             I5 = token["value"].ToObject<double>();
-                            I10 = token["value"].ToObject<double>();
-                            I12 = token["value"].ToObject<double>();
-                            I13 = token["value"].ToObject<double>();
-                            I14 = token["value"].ToObject<double>();
-                            I15 = token["value"].ToObject<double>();
                             I1I15 = token["value"].ToObject<double>();
                             I2I14 = token["value"].ToObject<double>();
                             I3I13 = token["value"].ToObject<double>();
@@ -131,7 +118,6 @@ namespace SignalRFunctions
                             Stick3 = token["value"].ToObject<double>();
                             Stick4 = token["value"].ToObject<double>();
                             Flow = token["value"].ToObject<double>();
-                            PerformRetry = token["value"].ToObject<int>();
                             Resp1_T1 = token["value"].ToObject<double>();
                             Resp1_T2 = token["value"].ToObject<double>();
                             Resp1_P5 = token["value"].ToObject<double>();
@@ -154,7 +140,6 @@ namespace SignalRFunctions
                         {"AdjJudge",AdjJudge},
                         {"Pressure",Pressure},
                         {"IP1",IP1},
-                        {"AdjRetry",AdjRetry},
                         {"CrimpJudge",CrimpJudge},
                         {"PerformJudge",PerformJudge},
                         {"I1",I1},
@@ -162,11 +147,6 @@ namespace SignalRFunctions
                         {"I3",I3},
                         {"I4",I4},
                         {"I5",I5},
-                        {"I10",I10},
-                        {"I12",I12},
-                        {"I13",I13},
-                        {"I14",I14},
-                        {"I15",I15},
                         {"I1I15",I1I15},
                         {"I2I14",I2I14},
                         {"I3I13",I3I13},
@@ -175,7 +155,6 @@ namespace SignalRFunctions
                         {"Stick3",Stick3},
                         {"Stick4",Stick4},
                         {"Flow",Flow},
-                        {"PerformRetry",PerformRetry},
                         {"Resp1_T1",Resp1_T1},
                         {"Resp1_T2",Resp1_T2},
                         {"Resp1_P5",Resp1_P5},

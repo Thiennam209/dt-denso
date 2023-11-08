@@ -73,13 +73,6 @@
     },
     {
       "@type": "Property",
-      "name": "AdjRetry",
-      "displayName": "AdjRetry",
-      "writable": true,
-      "schema": "integer"
-    },
-    {
-      "@type": "Property",
       "name": "CrimpJudge",
       "displayName": "CrimpJudge",
       "writable": true,
@@ -124,48 +117,6 @@
       "@type": "Property",
       "name": "I5",
       "displayName": "I5",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "I10",
-      "displayName": "I10",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "I11",
-      "displayName": "I11",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "I12",
-      "displayName": "I12",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "I13",
-      "displayName": "I13",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "I14",
-      "displayName": "I14",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "I15",
-      "displayName": "I15",
       "writable": true,
       "schema": "double"
     },
@@ -224,13 +175,6 @@
       "displayName": "Flow",
       "writable": true,
       "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "PerformRetry",
-      "displayName": "PerformRetry",
-      "writable": true,
-      "schema": "integer"
     },
     {
       "@type": "Property",
