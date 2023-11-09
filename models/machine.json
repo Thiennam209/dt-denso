@@ -34,7 +34,7 @@
       "name": "Part",
       "displayName": "Part",
       "writable": true,
-      "schema": "string"
+      "schema": "integer"
     },
     {
       "@type": "Property",

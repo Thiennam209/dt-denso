@@ -32,6 +32,9 @@ MachineId=$(az dt model create -n $adtname --models ./dt-denso/models/machine.js
 for i in {1..100}; do
     echo "Create machine Machine$i"
     az dt twin create -n $adtname --dtmi $MachineId --twin-id "Machine$i"
+done
+
+for i in {1..4}; do
     az dt twin update -n $adtname --twin-id "Machine$i" --json-patch '[{"op":"add", "path":"/MachineId", "value": "'"Machine$i"'"},{"op":"add", "path":"/Alert", "value": false},{"op":"add", "path":"/Time", "value": "Time"},
     {"op":"add", "path":"/Part", "value": 0},{"op":"add", "path":"/Station", "value": "0"},{"op":"add", "path":"/Serial", "value": 0},{"op":"add", "path":"/AdjJudge", "value": "0"},{"op":"add", "path":"/Pressure", "value": 0},
     {"op":"add", "path":"/IP1", "value": 0},{"op":"add", "path":"/CrimpJudge", "value": "0"},{"op":"add", "path":"/PerformJudge", "value": "0"},{"op":"add", "path":"/I1", "value": 0},{"op":"add", "path":"/I2", "value": 0},
