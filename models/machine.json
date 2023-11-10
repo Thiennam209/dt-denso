@@ -115,13 +115,6 @@
     },
     {
       "@type": "Property",
-      "name": "I5",
-      "displayName": "I5",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
       "name": "I1I15",
       "displayName": "I1I15",
       "writable": true,
@@ -143,13 +136,6 @@
     },
     {
       "@type": "Property",
-      "name": "I4I12",
-      "displayName": "I4I12",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
       "name": "Stick1",
       "displayName": "Stick1",
       "writable": true,
@@ -164,29 +150,8 @@
     },
     {
       "@type": "Property",
-      "name": "Stick4",
-      "displayName": "Stick4",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
       "name": "Flow",
       "displayName": "Flow",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "Resp1_T1",
-      "displayName": "Resp1_T1",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "Resp1_T2",
-      "displayName": "Resp1_T2",
       "writable": true,
       "schema": "double"
     },
@@ -201,20 +166,6 @@
       "@type": "Property",
       "name": "Resp1_P6",
       "displayName": "Resp1_P6",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "Resp2_T1",
-      "displayName": "Resp2_T1",
-      "writable": true,
-      "schema": "double"
-    },
-    {
-      "@type": "Property",
-      "name": "Resp2_T2",
-      "displayName": "Resp2_T2",
       "writable": true,
       "schema": "double"
     },

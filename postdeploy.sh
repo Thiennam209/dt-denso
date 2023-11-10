@@ -38,10 +38,9 @@ for i in {1..4}; do
     az dt twin update -n $adtname --twin-id "Machine$i" --json-patch '[{"op":"add", "path":"/MachineId", "value": "'"Machine$i"'"},{"op":"add", "path":"/Alert", "value": false},{"op":"add", "path":"/Time", "value": "Time"},
     {"op":"add", "path":"/Part", "value": 0},{"op":"add", "path":"/Station", "value": "0"},{"op":"add", "path":"/Serial", "value": 0},{"op":"add", "path":"/AdjJudge", "value": "0"},{"op":"add", "path":"/Pressure", "value": 0},
     {"op":"add", "path":"/IP1", "value": 0},{"op":"add", "path":"/CrimpJudge", "value": "0"},{"op":"add", "path":"/PerformJudge", "value": "0"},{"op":"add", "path":"/I1", "value": 0},{"op":"add", "path":"/I2", "value": 0},
-    {"op":"add", "path":"/I3", "value": 0},{"op":"add", "path":"/I4", "value": 0},{"op":"add", "path":"/I5", "value": 0},{"op":"add", "path":"/I1I15", "value": 0},{"op":"add", "path":"/I2I14", "value": 0},
-    {"op":"add", "path":"/I3I13", "value": 0},{"op":"add", "path":"/I4I12", "value": 0},{"op":"add", "path":"/Stick1", "value": 0},{"op":"add", "path":"/Stick3", "value": 0},{"op":"add", "path":"/Stick4", "value": 0},
-    {"op":"add", "path":"/Flow", "value": 0},{"op":"add", "path":"/Resp1_T1", "value": 0},{"op":"add", "path":"/Resp1_T2", "value": 0},{"op":"add", "path":"/Resp1_P5", "value": 0},{"op":"add", "path":"/Resp1_P6", "value": 0},
-    {"op":"add", "path":"/Resp2_T1", "value": 0},{"op":"add", "path":"/Resp2_T2", "value": 0},{"op":"add", "path":"/Resp2_T2", "value": 0},{"op":"add", "path":"/Resp2_P5", "value": 0},{"op":"add", "path":"/Resp2_P6", "value": 0}]'
+    {"op":"add", "path":"/I3", "value": 0},{"op":"add", "path":"/I4", "value": 0},{"op":"add", "path":"/I1I15", "value": 0},{"op":"add", "path":"/I2I14", "value": 0},{"op":"add", "path":"/I3I13", "value": 0},
+    {"op":"add", "path":"/Stick1", "value": 0},{"op":"add", "path":"/Stick3", "value": 0},{"op":"add", "path":"/Flow", "value": 0},{"op":"add", "path":"/Resp1_P5", "value": 0},{"op":"add", "path":"/Resp1_P6", "value": 0},
+    {"op":"add", "path":"/Resp2_T2", "value": 0},{"op":"add", "path":"/Resp2_P5", "value": 0},{"op":"add", "path":"/Resp2_P6", "value": 0}]'
 done
 
 # az eventgrid topic create -g $rgname --name $egname -l $location
