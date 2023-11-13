@@ -68,7 +68,7 @@ resource storage 'Microsoft.Storage/storageAccounts@2018-02-01' = {
 resource filecontainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2021-02-01' = {
   name: '${storage.name}/default/${fileContainerName}'
   properties: {
-    publicAccess: 'Blob'
+    publicAccess: 'Container'
   }
   dependsOn: [
     storage
