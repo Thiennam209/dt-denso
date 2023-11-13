@@ -60,6 +60,7 @@ resource storage 'Microsoft.Storage/storageAccounts@2018-02-01' = {
   kind: 'StorageV2'
   properties: {
     isHnsEnabled: false
+    allowBlobPublicAccess: true
   }
 }
 
